@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        body {
+          padding-top: 70px;
+          background-image: linear-gradient(
+        to right,
+         rgba(18,172, 142, 0.9),
+        rgba(18,172,142, .7)
+    ),
+    url("AdobeStock_616669496-1080x720.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+        }
+        </style>
+<body>
+<button><a href="index.html">BACK</a></button>  
+<br><br><br><h1><u>GENERAL DONATION</u></h1><p align="left">Organ transplantation saves thousands of lives worldwide.The below chart represents the <b>Number of people donated their organs.</b></p><br>
+<div id="piechart" align="center"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Donors', 'Percent of donation'],
+  ['1998-2003', 4],
+  ['2004-2007', 2],
+  ['2008-2013', 4],
+  ['2014-2018', 3],
+  ['2019-2023', 10]
+]);
+  var options = {'title':'Donors in TN', 'width':550, 'height':400};
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</body>
+</html>

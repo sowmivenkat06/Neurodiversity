@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+    --primary-color: #12ac8e;
+    --primary-color-dark: #0d846c;
+    --primary-color-light: #e9f7f7;
+    --secondary-color: #fb923c;
+    --text-dark: #333333;
+    --text-light: #fafafa;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f77f9f;
+    }
+    .jumbotron {
+      background-color: #12ac8e;
+      color: #ffffff;
+    }
+    .heading{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+.heading h1{
+    font-size: 50px;
+    color:#000000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4csf50;
+}
+.heading p{
+    font-size: 18px;
+    color:#fff;
+    margin-bottom: 35px;
+}
+.container{
+    width:90%;
+    margin:0 auto;
+    padding:10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    flex:1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-image img{
+    max-width:100%;
+    height:auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-content{
+    flex:1;
+}
+.about-content h1{
+    font-size:50px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color:#fff;
+}
+.about-content h4{
+    font-size: 18px;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.service__header {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 2rem;
+}
+.service__header__content p {
+    max-width: 600px;
+    color:var(--text-light);
+}
+.service__btn { 
+    padding: .75rem 1rem;
+    outline: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.service__btn:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+.service__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.service__card {
+    padding: 2rem;
+    text-align: center;
+    border-radius:10px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+    cursor:pointer;
+}
+.service__card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.service__card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+.service__card p{
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+.service__card a{
+color: var(--primary-color);
+}
+.service__card a:hover{
+    color: var(--primary-color-dark);
+}
+.service__card:hover span{
+    color: var(--primary-color-light);
+    background-color: var(--primary-color);
+}.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #12ac8e;
+  color: white;
+  transform: rotateY(180deg);
+}
+    </style>
+    </head>
+    <body>
+    <button><a href="index.html">BACK</a></button>
+      <div class="jumbotron text-center">
+        <h1>Donation</h1>
+        <p>Your support makes a difference</p>
+      </div>
+      <div>
+        <div class="container">
+            <section class="about">
+                <div class="about-image">
+                    <img src="1-8-organs-can-be-donated-website-DD-blogs.jpg" width="400" length="400">
+                </div>
+                <div class="about-content">
+                    <h1>What is organ donation?
+                    </h1>
+                   <h4> <p>Organ donation is when you decide to give an organ to save or transform the life of someone else.<br> You can donate some organs while you are alive, and this is called living organ donation.
+<br>However, most organ and tissue donations come from people who have died.</h4></p>
+                        <h1>What can you donate?
+                        </h1><h2><u>Organ donation</u>
+                        </h2>
+<p>                        <h4>Everyone has a choice as to whether or not they want to become an organ donor after they die, and if you choose to donate, you can choose to donate either some or all of your organs.<br>By registering to become an organ donor you have the option to donate organs such as your heart, lungs, liver, kidneys, pancreas and small bowel. All of these forms of donation can greatly enhance or even save the life of someone in need.
+                        </h4>
+                    </p>
+                    <h2><u>Tissue donation                </u>    </h2>
+                    <h4>When you register to donate your organs, you can also choose to donate your corneas, and your tissues, including bone</h4>
+             <br>   </div>
+            </section>
+            <center>   <h5>JUST MAKE A FLIP DOWN</h5>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                 <img src="donation1.jpg" alt="DONATION" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h2>WORLD ORGAN DONATION DAY</h2>      <br><br>
+                <h4>AUGUST 13</h4>            </div>
+                </div>
+              </div>
+            </center>
+            <ul>
+            <section class="section__container service__container">
+                <div class="service__header">
+                  <div class="service__header__content">
+                   <h2 class="section__header"><li>Organ Donation</h2></li>
+                    <p>Beyond simply providing medical care,our commitment lies in delivering unparalleled service tailored to your unique needs.</p>
+                  </div>                </div>
+                <div class="service__grid">
+                  <div class="service__card">
+                    <h4>HEART</h4>
+                    <img src="heart.jpg">
+<p>Your muscular heart, the main organ in your cardiovascular system, is vital for life. Its parts work together to move blood through your body in a coordinated way.</p>                          </div>
+                  <div class="service__card">
+                    <h4>LUNGS</h4>
+                    <img src="lungs.jpg">
+<p>One of the two organs of your body that are inside your chest and are used for breathing.</p>                          </div>
+                  <div class="service__card">
+                    <h4>LIVER</h4>
+                    <img src="liver.jpg">
+<p>The liver is an organ that sits just under the rib cage on the right side of the abdomen.The liver is needed to help digest food, rid the body of waste products and make substances, called clotting factors, that keep the blood flowing well, among other tasks.</p>                    
+                          </div>
+                          <div class="service__card">
+                            <h4>KIDNEYS</h4>
+                            <img src="kidneys.jpg">
+<p>The kidneys remove waste and extra water from the blood (as urine) and help keep chemicals (such as sodium, potassium, and calcium) balanced in the body.</p>                                  </div>
+                          <div class="service__card">
+                            <h4>PANCREAS</h4>
+                            <img src="pancreas.jpg" height="200">
+<p>The pancreas is an elongated, tapered organ located across the back of the belly, behind the stomach. </p>                                  </div>
+                          <div class="service__card">
+                            <h4>SMALL BOWEL</h4>
+                            <img src="smallbowel.webp" height="200">
+<p>The small intestine (small bowel) is a hollow, tubular structure with an average adult length of 22 feet (7 meters), making it the longest portion of the gastrointestinal (GI) tract, where the majority of digestion occurs.</p>                </div>
+              </section>
+             <section class="section__container service__container">
+                <div class="service__header">
+                  <div class="service__header__content">
+                    <h2 class="section__header"><br><br><li>Tissue Donation</li></h2>
+                    <p>Beyond simply providing medical care,our commitment lies in delivering unparalleled service tailored to your unique needs.</p>
+                  </div>                </div>
+                <div class="service__grid">
+                    <div class="service__card">
+                        <h4>CORNEA(EYES)</h4>
+                        <img src="cornea.jpg">
+<p>The cornea is the clear outer layer at the front of the eye. The cornea helps your eye to focus light so you can see clearly.</p>                              </div>
+                      <div class="service__card">
+                        <h4>BONE</h4>
+                        <img src="bone.jpg">
+<p>Bones are made of connective tissue reinforced with calcium and specialised bone cells.</p>                              </div>
+                              <div class="service__card">
+
+                              <h4>TENDON</h4>
+                              <img src="tendon.jpg">
+<p>A tendon is a cord of strong, flexible tissue, similar to a rope. Tendons connect your muscles to your bones.</p>                                    </div>
+        </div>
+        </section>
+        </ul> 
+
+        
+      </body>
+      </html>
